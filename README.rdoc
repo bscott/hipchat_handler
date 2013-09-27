@@ -1,0 +1,21 @@
+= hipchat handler for Chef using Tinder
+
+Report chef exceptions to hipchat.
+
+Works fine with chef versions: 0.10.x or higher
+
+Can now send chef updated resources and stacktraces to hipchat!
+
+== Usage
+
+  gem install hipchat_handler
+
+In your chef client file (often placed at /etc/chef/client.rb) put:
+
+  require "hipchat_handler"
+  exception_handlers << HipchatHandler.new(:api_token => "your-hipchat-token",:room => "your-hipchat-room")
+
+== Copyright
+
+Copyright (c) 2013 Brian Scott, See LICENSE for details.
+
